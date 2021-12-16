@@ -15,7 +15,7 @@ st.markdown(
         """
         <style>
         .reportview-container {
-            background: url("https://www.pinsentmasons.com/-/media/images/cards/oil-rig-sunset.jpg?la=en-gb")
+            background: url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg")
         }
     .sidebar .sidebar-content {
             background: url("https://wallpaperaccess.com/full/2959083.jpg")
