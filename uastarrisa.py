@@ -1,3 +1,8 @@
+#Tarrisa Cindy Fitriani
+#12220055
+#Kelas-01
+#UAS PEMROGRAMAN KOMPUTER SEMESTER 3 TAHUN AJARAN 2021/2022 
+
 import pandas as pd
 import streamlit as st
 import altair as alt
@@ -16,9 +21,6 @@ st.markdown(
         <style>
         .reportview-container {
             background: url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg")
-        }
-    .sidebar .sidebar-content {
-            background: url("https://wallpaperaccess.com/full/2959083.jpg")
         }
         </style>
         """,
@@ -66,7 +68,7 @@ def create_markdown_from_list(text_list):
         st.markdown(text)
 #Container for title
 with titlec:
-    st.title("Visualizer data produsen minyak mentah dunia")
+    st.title("Data Produsen Minyak Mentah Dunia")
 # Container yang berisi fitur soal A
 with container_a:
     st.markdown("---")
@@ -181,3 +183,5 @@ with container_d:
             st.markdown(f"Produksi kumulatif {negara['name']} adalah {negaradf['produksi'].values[0]}")
         else:
             st.markdown(f"Produksi {negara['name']} pada tahun {negaradf['tahun'].values[0]} adalah {negaradf['produksi'].values[0]}")
+
+st.write('Tarrisa Cindy Fitriani (12220055|Teknik Perminyakan ITB') 
