@@ -11,6 +11,20 @@ container_c = st.container()
 informasi_negara = st.container()
 container_d = st.container()
 
+st.markdown(
+        """
+        <style>
+        .reportview-container {
+            background: url("https://www.pinsentmasons.com/-/media/images/cards/oil-rig-sunset.jpg?la=en-gb")
+        }
+    .sidebar .sidebar-content {
+            background: url("https://wallpaperaccess.com/full/2959083.jpg")
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 # load data
 df = pd.read_csv('produksi_minyak_mentah.csv', index_col="kode_negara")
 negara_dict_al3 = {negara['alpha-3']:negara for negara in json.loads(open("kode_negara_lengkap.json").read())}
