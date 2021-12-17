@@ -112,6 +112,8 @@ with container_c:
     # data frame
     prod_all_time = df[['kode_negara', 'produksi']].groupby('kode_negara', as_index=False).sum().sort_values('produksi', ascending=False)[:n]
     make_altair_bar(prod_all_time, 'kode_negara', 'produksi') # bar chart
+    with st.expander('Lihat dalam bentuk tabel'):
+     st.dataframe(prod_all_time)
 # Container extra fitur
 with informasi_negara:
     st.markdown('---')
