@@ -69,7 +69,7 @@ def create_markdown_from_list(text_list):
 #Container for title
 with titlec:
     st.title("Data Produsen Minyak Mentah Dunia")
-st.write('dibuat oleh: Tarrisa Cindy Fitriani (12220055|Teknik Perminyakan ITB)') 
+    st.write('dibuat oleh: Tarrisa Cindy Fitriani (12220055|Teknik Perminyakan ITB)') 
 
 # Container yang berisi fitur soal A
 with container_a:
@@ -185,3 +185,4 @@ with container_d:
             st.markdown(f"Produksi kumulatif {negara['name']} adalah {negaradf['produksi'].values[0]}")
         else:
             st.markdown(f"Produksi {negara['name']} pada tahun {negaradf['tahun'].values[0]} adalah {negaradf['produksi'].values[0]}")
+
