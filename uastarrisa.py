@@ -96,7 +96,8 @@ with container_b:
     # create dataframe
     minyak_year_n = df.loc[df["tahun"] == y].sort_values('produksi', ascending=False)[:n] 
     make_altair_bar(minyak_year_n, 'kode_negara', 'produksi') # bar chart
-    st.dataframe(display_data)
+    with st.expander('Lihat dalam bentuk tabel'):
+     st.dataframe(minyak_year_n)
 # Container yang berisi fitur soal C
 with container_c:
     st.markdown('---')
