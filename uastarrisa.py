@@ -40,7 +40,6 @@ negara_dict_name = {negara['name']:negara for negara in json.loads(open("kode_ne
 # data cleaning
 for n in df.index.unique().tolist():
     if n not in negara_dict_al3:
-        print("out")
         df.drop([n], inplace=True)
 
 df.reset_index(inplace=True)
@@ -54,7 +53,6 @@ def make_altair_bar(df, x, y):
     )
 # membuat dict dari nama negara
 def get_info_negara(nama):
-    print(nama)
     negara = negara_dict_name[nama]
     negara_dict = {
         'Nama': negara['name'],
@@ -112,7 +110,7 @@ with container_c:
     # User input
     n = st.slider('Jumlah peringkat', 1, len(df['kode_negara'].unique()), value=10, key='c')
     # data frame
-    prod_all_time=df[['kode_negara', 'produksi']].groupby('kode_negara',as_index=False).sum().sort_values('produksi', ascending=False)[:n]
+    prod_all_time = df[['kode_negara', 'produksi']].groupby('kode_negara', as_index=False).sum().sort_values('produksi', ascending=False)[:n]
     make_altair_bar(prod_all_time, 'kode_negara', 'produksi') # bar chart
     with st.expander('Lihat dalam bentuk tabel'):
      st.dataframe(prod_all_time)
@@ -134,9 +132,7 @@ with container_d:
     # disini grouped sudah menjadi total atau tahunan
     # tipe 1
     if switch_filter == 'Paling tinggi':
-        print(grouped)
         rowid = grouped['produksi'].idxmax() # dapatkan index nilai max
-        print(f"row id ={rowid}") 
         negaradf = grouped[rowid:rowid+1] # dapatkan dataframe row dengan index nilai max
         negara = negara_dict_al3[negaradf['kode_negara'].values[0]] # dapatkan dict dari kode negara
         create_markdown_from_dict(get_info_negara(negara['name'])) # buat markdown dari dict
