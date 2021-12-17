@@ -26,7 +26,7 @@ st.markdown(
         """,
         unsafe_allow_html=True
     )
-
+st.sidebar.image('https://energycapitalpower.com/wp-content/uploads/Oil-in-Egypt.jpeg')
 st.sidebar.image('https://ditsti.itb.ac.id/wp-content/uploads/2020/09/logo_itb_128.png' )
 st.sidebar.write('Teknik Perminyakan ITB')
 st.sidebar.write(' ')
