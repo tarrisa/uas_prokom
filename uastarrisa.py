@@ -20,7 +20,7 @@ st.markdown(
         """
         <style>
         .reportview-container {
-            background: url("https://images.unsplash.com/photo-1595404603599-2ad07f19556d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&w=1000&q=80")
+            background: url("https://cache.desktopnexus.com/thumbseg/1108/1108912-bigthumbnail.jpg")
         }
         </style>
         """,
