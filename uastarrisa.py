@@ -27,6 +27,8 @@ st.markdown(
         unsafe_allow_html=True
     )
 
+st.sidebar.image('https://ditsti.itb.ac.id/wp-content/uploads/2020/09/logo_itb_128.png' )
+
 # load data
 df = pd.read_csv('produksi_minyak_mentah.csv', index_col="kode_negara")
 negara_dict_al3 = {negara['alpha-3']:negara for negara in json.loads(open("kode_negara_lengkap.json").read())}
