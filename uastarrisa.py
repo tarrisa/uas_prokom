@@ -28,7 +28,9 @@ st.markdown(
     )
 
 st.sidebar.image('https://ditsti.itb.ac.id/wp-content/uploads/2020/09/logo_itb_128.png' )
-st.sidebar.write('aplikasi GUI berbasis Streamlit yang mengambarkan informasi seputar data produksi minyak mentah dari berbagai negara di seluruh dunia.')
+st.sidebar.write('Teknik Perminyakan ITB')
+st.sidebar.write(' ')
+st.sidebar.write('Aplikasi GUI berbasis Streamlit yang mengambarkan informasi seputar data produksi minyak mentah dari berbagai negara di seluruh dunia.')
 
 # load data
 df = pd.read_csv('produksi_minyak_mentah.csv', index_col="kode_negara")
