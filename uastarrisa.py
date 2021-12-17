@@ -20,7 +20,7 @@ st.markdown(
         """
         <style>
         .reportview-container {
-            background: url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg")
+            background: url("https://swall.teahub.io/photos/small/287-2876525_colorful-gradient-pastel-orange-wallpaper-iphone.png")
         }
         </style>
         """,
