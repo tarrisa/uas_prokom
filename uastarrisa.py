@@ -89,6 +89,7 @@ with container_a:
     display_data = df[df["kode_negara"] == kodeNegara][['tahun', 'produksi']] # create dataframe
     display_data = display_data.set_index('tahun')
     st.bar_chart(display_data)
+
 # Container yang berisi fitur soal B
 with container_b:
     st.markdown("---")
@@ -103,6 +104,7 @@ with container_b:
     make_altair_bar(minyak_year_n, 'kode_negara', 'produksi') # bar chart
     with st.expander('Lihat dalam bentuk tabel'):
      st.dataframe(minyak_year_n)
+
 # Container yang berisi fitur soal C
 with container_c:
     st.markdown('---')
@@ -110,10 +112,11 @@ with container_c:
     # User input
     n = st.slider('Jumlah peringkat', 1, len(df['kode_negara'].unique()), value=10, key='c')
     # data frame
-    prod_all_time = df[['kode_negara', 'produksi']].groupby('kode_negara', as_index=False).sum().sort_values('produksi', ascending=False)[:n]
+    prod_all_time=df[['kode_negara', 'produksi']].groupby('kode_negara',as_index=False).sum().sort_values('produksi', ascending=False)[:n]
     make_altair_bar(prod_all_time, 'kode_negara', 'produksi') # bar chart
     with st.expander('Lihat dalam bentuk tabel'):
      st.dataframe(prod_all_time)
+
 # Container yang berisi fitur soal D
 with container_d:
     st.markdown('---')
