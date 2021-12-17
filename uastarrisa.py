@@ -114,31 +114,6 @@ with container_c:
     make_altair_bar(prod_all_time, 'kode_negara', 'produksi') # bar chart
     with st.expander('Lihat dalam bentuk tabel'):
      st.dataframe(prod_all_time)
-# Container extra fitur
-with informasi_negara:
-    st.markdown('---')
-    st.markdown('## Filter produsen')
-    # input user
-    select_negara = st.selectbox("Pilih negara yang ingin dicek", list_negara)
-    #info negara
-    negara = negara_dict_name[select_negara]
-    kode = negara['alpha-3']
-
-    produksi_negara = df.loc[df['kode_negara'] == kode] 
-    index_max = produksi_negara['produksi'].idxmax() 
-    max_prod = produksi_negara['produksi'][index_max]
-    max_prod_year = produksi_negara['tahun'][index_max]
-    prod_total = produksi_negara['produksi'].sum()
-
-    st.markdown(f'#### Data negara {select_negara}')
-    create_markdown_from_dict(get_info_negara(select_negara)) # buat markdown dari info negara
-
-    st.markdown(f'#### Data produksi minyak {select_negara}')
-    info_prod = [
-        f'Produksi Paling tinggi sebanyak *{max_prod}* pada tahun *{max_prod_year}*',
-        f'Selama ini telah memproduksi sebanyak *{prod_total}*'
-    ]
-    create_markdown_from_list(info_prod) # membuat markdown dari info produksi
 # Container yang berisi fitur soal D
 with container_d:
     st.markdown('---')
